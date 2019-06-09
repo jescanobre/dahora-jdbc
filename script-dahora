@@ -1,0 +1,26 @@
+CREATE TABLE graduacao(
+	id SERIAL,
+	nome varchar(30) NOT NULL,
+	horas int NOT NULL,
+	CONSTRAINT graduacao_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE aluno(
+	matricula varchar(6) NOT NULL,
+	nome varchar(60) NOT NULL,
+	email varchar(60) NOT NULL,
+	senha varchar(8) NOT NULL,
+	graduacao_id BIGINT NOT NULL,
+	CONSTRAINT aluno_pkey PRIMARY KEY (matricula),
+	CONSTRAINT aluno_fkey FOREIGN KEY (graduacao_id) REFERENCES graduacao (id)
+);
+
+CREATE TABLE certificado(
+	id SERIAL,
+	matricula_aluno varchar(6) NOT NULL,
+	titulo varchar(20) NOT NULL,
+	tipo varchar(20) NOT NULL,
+	qtd_horas int NOT NULL,
+	CONSTRAINT certificado_pkey PRIMARY KEY (id),
+	CONSTRAINT certificado_fkey FOREIGN KEY (matricula_aluno) REFERENCES aluno(matricula)
+);
