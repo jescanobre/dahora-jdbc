@@ -13,7 +13,7 @@ public class ConnectionPostgres {
 	
 	public Connection getConnection() {
 		try {
-			return DriverManager.getConnection("jdbc:postgresql://"+ip+":"+port+"/"+database, user, password);
+			return DriverManager.getConnection("jdbc:postgresql://localhost:5432/daHora", user, password);
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
