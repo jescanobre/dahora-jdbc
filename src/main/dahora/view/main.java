@@ -4,8 +4,6 @@ import java.awt.SystemColor;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import org.omg.CORBA.SystemException;
-
 import main.dahora.connection.ConnectionPostgres;
 
 public class main {
