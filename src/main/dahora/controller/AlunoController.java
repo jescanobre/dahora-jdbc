@@ -18,7 +18,15 @@ public class AlunoController {
 	}
 	
 	public Aluno getAlunoByMatricula(Integer matricula) {
-		return alunoDAO.read(matricula);
+		return alunoDAO.getAluno(matricula);
+	}
+	
+	public boolean deleteAluno(Integer matricula) {
+		return alunoDAO.delete(matricula);
+	}
+	
+	public boolean UpdateAluno(Aluno aluno) {
+		return alunoDAO.update(aluno);
 	}
 	
 }

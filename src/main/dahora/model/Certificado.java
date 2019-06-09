@@ -12,6 +12,10 @@ public class Certificado {
 		this.tipo = tipo;
 		this.qtdHoras = qtdHoras;
 	}
+	
+	public Certificado() {
+			
+	}
 
 	public Long getId() {
 		return id;

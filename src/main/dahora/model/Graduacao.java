@@ -10,6 +10,10 @@ public class Graduacao {
 		this.nome = nome;
 		this.horas = horas;
 	}
+	
+	public Graduacao () {
+		
+	}
 
 	public Long getId() {
 		return id;
