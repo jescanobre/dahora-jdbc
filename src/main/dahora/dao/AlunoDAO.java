@@ -130,6 +130,5 @@ public class AlunoDAO {
 		}
 		
 		return false;
-	}
-	
+	}	
 }
