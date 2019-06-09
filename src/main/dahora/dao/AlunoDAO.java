@@ -45,7 +45,7 @@ public class AlunoDAO {
 		return false;
 	}
 	
-	public Aluno read (Integer matricula) {
+	public Aluno getAluno (Integer matricula) {
 		String sql = "select * from aluno where matricula = ?";
 		Aluno aluno = null;
 		
