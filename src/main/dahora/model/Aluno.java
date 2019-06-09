@@ -13,6 +13,10 @@ public class Aluno {
 		this.senha = senha;
 	}
 	
+	public Aluno() {
+	
+	}
+	
 	public Integer getMatricula() {
 		return matricula;
 	}
